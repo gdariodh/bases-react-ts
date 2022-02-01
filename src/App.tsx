@@ -1,4 +1,5 @@
 import { Counter } from './components/Counter';
+import { CounterBy } from './components/CounterBy';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <hr />
 
     <Counter initialValue={15}/>
+    <CounterBy/>
     </>
   );
 }
