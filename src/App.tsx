@@ -1,6 +1,7 @@
 import { Counter } from './components/Counter';
 import { CounterBy } from './components/CounterBy';
 import { CounterEffect } from './components/CounterEffect';
+import { CounterHook } from './components/CounterHook';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
     <Counter initialValue={15}/>
     <CounterBy/>
     <CounterEffect/>
-    <CounterEffect/>
+    <CounterHook/>
     </>
   );
 }
