@@ -1,6 +1,8 @@
 import { useReducer } from "react";
 import { CounterState } from "./interfaces/interfaces";
 import { counterReducer } from "./state/counterReducer";
+import { doReset, doIncreaseBy } from "./actions/actions";
+
 
 // colocamos la interface pa hacerlo estricto el state
 export const INITIAL_STATE: CounterState = {
@@ -13,16 +15,11 @@ export const CounterReducerComponent = () => {
   const [state, dispatch] = useReducer(counterReducer, INITIAL_STATE);
 
   const handleReset = () => {
-    dispatch({
-      type: "reset",
-    });
+    dispatch(doReset());
   };
 
   const increaseBy = (value: number) => {
-    dispatch({
-      type: "increaseBy",
-      payload: { value },
-    });
+    dispatch(doIncreaseBy(value));
   };
 
   return (
